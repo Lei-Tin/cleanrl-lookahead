@@ -1,0 +1,6 @@
+BreakoutNoFrameskip-v4
+AlienNoFrameskip-v4
+MsPacmanNoFrameskip-v4
+ALE/Pacman-v5
+ALE/DonkeyKong-v5
+ALE/Tetris-v5
