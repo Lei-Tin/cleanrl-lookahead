@@ -6,6 +6,7 @@ import time
 from distutils.util import strtobool
 
 from collections import OrderedDict, defaultdict
+from torch.optim.optimizer import Optimizer
 
 import gymnasium as gym
 import numpy as np
