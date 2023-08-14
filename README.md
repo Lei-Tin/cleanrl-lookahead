@@ -1,3 +1,7 @@
+# Update August 14, 2023
+
+Running the script with run_XXX_atari.sh will run the experiment for you, just ensure that Gitpod doesn't timeout. 
+
 # CleanRL (Clean Implementation of RL Algorithms)
 
 

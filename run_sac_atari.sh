@@ -12,11 +12,11 @@ cp atari_wrappers_copy.py .venv/lib/python3.8/site-packages/stable_baselines3/co
 echo "Clearing previous run results..."
 rm -rf runs/*
 
-echo "Starting PPO..."
+echo "Starting SAC..."
 
 while read p; do
-    poetry run python cleanrl/ppo_atari_lookahead.py --exp-name "$p-Lookahead" --env-id $p --total-timesteps $TIMESTEPS
-    poetry run python cleanrl/ppo_atari.py --exp-name "$p-NoLookahead" --env-id $p --total-timesteps $TIMESTEPS
+    poetry run python cleanrl/sac_atari_lookahead.py --exp-name "$p-Lookahead" --env-id $p --total-timesteps $TIMESTEPS
+    poetry run python cleanrl/sac_atari.py --exp-name "$p-NoLookahead" --env-id $p --total-timesteps $TIMESTEPS
 done < "$GAMESFILE"
 
-tar -cvf results/"ppo_results_${TIMESTEPS}_$(date '+%Y-%m-%d_%H-%M-%S%z(%Z)').tar" runs $GAMESFILE
+tar -cvf results/"sac_results_${TIMESTEPS}_$(date '+%Y-%m-%d_%H-%M-%S%z(%Z)').tar" runs $GAMESFILE
